@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../../css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/index.css" type="text/css" />
+
+    <!-- ===== Boxicons CDN Link ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- ===== Fontawesome CDN Link ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ===== Link Swiper's CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <title>ЕСОЗ</title>
+  </head>
+  <body>
+ <!-- Header start -->
+ <header class="header">
+  <div class="container">
+    <div class="header__box">
+      <div class="visual__block">
+        <div class="title__box">
+          <div class="logo visual__title">
+            <a href="./index.html">
+              <img
+                style="width: 400px"
+                src="../../assets/images/new_design/eh_sign_concept_white.png"
+                alt="e-health logo"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="nav">
+          <div class="nav__menu">
+            <div class="search__box">
+              <span class="search__box-span">
+                <input
+                  id="field"
+                  class="search__line"
+                  type="text"
+                  placeholder="Пошук..."
+                  oninput="toggleIcon()"
+                />
+                <i id="icon-search" class="bx bx-search search__icon"></i>
+                <i id="icon-cross" class="bx bx-x cross__icon"></i>
+              </span>
+
+              <div class="menu__btn-box">
+                <button id="btnOpen" class="menu-toggle">Menu</button>
+              </div>
+
+              <div class="toggle-btn-box">
+                <i
+                  id="font-size-toggle"
+                  class="bx bx-font-size btn-icon icon__visual"
+                ></i>
+                <i id="toggleButton" class="bx bx-low-vision btn-icon"></i>
+              </div>
+            </div>
+
+            <nav class="fullscreen-nav">
+              <div class="background-img">
+                <div class="nav__content">
+                  <div class="nav__content-sections">
+                    <h3>Електронна охорона здоровʼя</h3>
+                    <ul>
+                      <li class="dropdwn__item">
+                        <div class="nav__link dropdown__btn">
+                          Системи
+                          <i class="bx bx-chevron-down dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dordwn__container">
+                          <div class="dropdwn__content">
+                            <div class="dropdwn__group">
+                              <div class="dropdwn__icon"></div>
+                              <span class="dropdwn__title"> </span>
+
+                              <ul class="dropdwn__list">
+                                <li>
+                                  <a href="./esoz.html" class="dropdwn__link">ЕОЗ</a>
+                                </li>
+                                <li>
+                                  <a href="./central.html" class="dropdwn__link">Централь</a>
+                                </li>
+                                <li>
+                                  <a href="./mis.html" class="dropdwn__link">МІСи</a>
+                                </li>
+                                <li>
+                                  <a href="./is-nczu.html" class="dropdwn__link">ІС НСЗУ</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="dropdwn__item">
+                        <div class="nav__link dropdown__btn">
+                          Реєстри
+                          <i class="bx bx-chevron-down dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dordwn__container">
+                          <div class="dropdwn__content">
+                            <div class="dropdwn__group">
+                              <div class="dropdwn__icon"></div>
+                              <span class="dropdwn__title"> </span>
+
+                              <ul class="dropdwn__list">
+                                <li>
+                                  <a href="../Реєстри/registers.html" class="dropdwn__link">Базові реєстри країни та сфери охорони
+                                    здоровʼя
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="dropdwn__item">
+                        <div class="nav__link dropdown__btn">
+                          Дані
+                          <i class="bx bx-chevron-down dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dordwn__container">
+                          <div class="dropdwn__content">
+                            <div class="dropdwn__group">
+                              <div class="dropdwn__icon"></div>
+                              <span class="dropdwn__title"> </span>
+
+                              <ul class="dropdwn__list">
+                                <li>
+                                  <a href="../Дані/dashboards.html" class="dropdwn__link">Дашборди ЕСОЗ</a>
+                                </li>
+                                <li>
+                                  <a href="../Дані/information-platform.html" class="dropdwn__link">Інформаційна платформа</a>
+                                </li>
+                                <li>
+                                  <a href="" class="dropdwn__link">Сайт з протоколами лікування Duodecim</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li class="dropdwn__item">
+                        <a href="../Законодавство/legislation.html" class="nav__link dropdown__btn">
+                         Законодавство
+                         
+                          <i class='bx bx-chevron-right' ></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="nav__content-sections">
+                    <h3>Надавачам послуг</h3>
+
+                    <ul>
+                      <li>
+                        <a href="/">
+                          Керівникам ЗОЗ
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Надавачам послуг/to-doctors.html">
+                          Лікарям
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/Надавачам послуг/to-pharmacy.html"
+                          >Аптечним закладам</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/Надавачам послуг/library.html">
+                          Бібліотека знань</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="nav__content-sections">
+                    <ul>
+                      <li>
+                        <a href="/Пацієнтам/patients.html"> Пацієнтам</a>
+                      </li>
+                      <li>
+                        <a href="/Партнерам/partners.html"> Партнерам</a>
+                      </li>
+                      <li>
+                        <a
+                          href="/Розробникам інформаційних систем/to_information_systems.html"
+                        >
+                          Розробникам інформаційних систем</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/Новини/news.html"> Новини</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Header end -->
+
+    <div class="container">
+      <div id="breadcrumbs" class="breadcrumbs">
+        <span class="breadcrumb"><a href="/index.html">Головна</a></span>
+        <span class="separator">/</span>
+      </div>
+    </div>
+
+    <!-- Main start -->
+
+    <main class="content" style="margin: 100px 0">
+      <i
+        id="scrollButton"
+        class="fas fa-chevron-circle-up scroll__icon-top"
+      ></i>
+      <div class="container">
+        <div class="tab__section-title">
+          <h1>ЕОЗ</h1>
+        </div>
+       
+            <section class="esoz__main-content">
+              <h2>
+                <strong> Електронна система охорони здоров'я</strong>
+                <span>
+                  — найбільша ІТ-система України з двокомпонентною структурою, в
+                  якій користувач через МІС взаємодіє з центральною базою
+                  даних</span
+                >
+              </h2>
+            </section>
+
+            <div class="sections__divider"></div>
+
+            <section class="goals__section">
+              <h1>Цілі ЕСОЗ</h1>
+
+              <div class="main__nav">
+                <div class="box box-down dark-blue">
+                  <h2>Розвивати надійні медичні цифрові сервіси</h2>
+                  <p>для зручного доступу до інформації про стан здоров’я</p>
+                  <img
+                    src="../../assets/images/ehealth_sharp.gif"
+                    alt="Логотип есоз"
+                  />
+                </div>
+
+                <div class="box yellow">
+                  <h2>Покращувати взаємодію</h2>
+                  <p>
+                    між усіма учасниками медичного ринку завдяки зручному
+                    створенню, перегляду та обміну медичною інформацією
+                  </p>
+                  <img
+                    src="../../assets/images/ehealth_sharp.gif"
+                    alt="Логотип есоз"
+                  />
+                </div>
+
+                <div class="box box-down dark-blue">
+                  <h2>Надати можливість працювати без паперу,</h2>
+                  <p>
+                    поступовий перехід на електронний облік (е-рецепт,
+                    е-направлення, е-картка тощо).
+                  </p>
+                  <img
+                    src="../../assets/images/ehealth_sharp.gif"
+                    alt="Логотип есоз"
+                  />
+                </div>
+
+                <div class="box yellow">
+                  <h2>Забезпечити прозорість фінансування</h2>
+                  <p>
+                    системи охорони здоров'я, для реалізації державних
+                    фінансових гарантій та інше.
+                  </p>
+                  <img
+                    src="../../assets/images/ehealth_sharp.gif"
+                    alt="Логотип есоз"
+                  />
+                </div>
+
+                <div class="box dark-blue">
+                  <h2>Сформувати бізнес-середовище</h2>
+                  <p>для створення нових електронних сервісів.</p>
+                  <img
+                    src="../../assets/images/ehealth_sharp.gif"
+                    alt="Логотип есоз"
+                  />
+                </div>
+
+                <div class="box yellow">
+                  <h2>Сприяти розвитку ІТ-ринку</h2>
+                  <p>у сфері охорони здоровʼя.</p>
+                  <img
+                    src="../../assets/images/ehealth_sharp.gif"
+                    alt="Логотип есоз"
+                  />
+                </div>
+
+                <div class="box dark-blue">
+                  <h2>Створити простір для інновацій</h2>
+                  <p>
+                    в медицині (machine learning, big data, blockchain, etc.)
+                  </p>
+                  <img
+                    src="../../assets/images/ehealth_sharp.gif"
+                    alt="Логотип есоз"
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section class="esoz__main-structure">
+              <div>
+                <h1>Структура ЕСОЗ:</h1>
+              </div>
+
+              <div class="structure__content">
+                <div class="structure__content-state">
+                  <h2>Державний компонент</h2>
+                  <p>
+                    <strong>Центральна база даних (ЦБД)</strong>
+                    – центральний компонент ЕСОЗ, який управляється та належить
+                    державі і містить основні програмні модулі та реєстри, які
+                    забезпечують можливість управління, збереження та обмін
+                    інформацією та документами в сфері охорони здоров’я.
+                  </p>
+
+                  <p>
+                    <strong>Центральна база даних</strong>
+                    електронної системи охорони здоров’я забезпечує можливість
+                    управління, збереження та обмін інформацією та документами в
+                    сфері охорони здоров’я.
+                  </p>
+
+                  <!-- ------------------------------------------ -->
+
+                  <div class="vertical-stepper">
+                    <div class="step">
+                      <div class="step-icon">
+                        <img src="icon-1.png" alt="Step 1" />
+                      </div>
+                      <div class="step-content">
+                        Передбачені законодавством реєстри
+                      </div>
+                    </div>
+                    <div class="step">
+                      <div class="step-icon">
+                        <img src="icon-2.png" alt="Step 2" />
+                      </div>
+                      <div class="step-content">Програмні модулі</div>
+                    </div>
+                    <div class="step">
+                      <div class="step-icon">
+                        <img src="icon-3.png" alt="Step 3" />
+                      </div>
+                      <div class="step-content">
+                        Електронна медична інформаційно-аналітична система з
+                        оптимізації роботи оперативно-диспетчерських служб
+                        центрів екстреної медичної допомоги та медицини
+                        катастроф - Централь 103
+                        <a href="hyperlink-to-Central-103-page"
+                          >(гіперлінк на сторінку Централь 103 бібліотеки)</a
+                        >
+                      </div>
+                    </div>
+                    <div class="step">
+                      <div class="step-icon">
+                        <img src="icon-4.png" alt="Step 4" />
+                      </div>
+                      <div class="step-content">
+                        Інформаційна система НСЗУ
+                        <a href="hyperlink-to-NSZU-page"
+                          >(гіперлінк на сторінку ІС НСЗУ в бібліотеці)</a
+                        >
+                        в частині, необхідній для реалізації державних
+                        фінансових гарантій медичного обслуговування населення
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ---------------------------------------------- -->
+                </div>
+
+                <div class="in-section-divider"></div>
+
+                <div class="structure__content-private">
+                  <h2>Приватний компонент</h2>
+                  <p>
+                    <strong
+                      >МІС (електронна медична інформаційна система) </strong
+                    >— узагальнена назва низки окремих державних та комерційних
+                    програмних продуктів (систем), завдяки яким через
+                    спеціалізоване програмне забезпечення можна автоматизувати
+                    роботу суб’єктів господарювання у сфері охорони здоров’я,
+                    створювати, переглядати, обмінюватися інформацією в
+                    електронній формі, зокрема з центральною базою даних (у разі
+                    підключення).
+                  </p>
+                  <div>
+                    <img src="../../assets/images/structure.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div>
+                <h2>Які інструменти вдалося реалізувати завдяки ЕСОЗ?</h2>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <a href=""> Декларації </a>
+                  </li>
+                  <li>
+                    <a href="">Електронні направлення</a>
+                  </li>
+                  <li>
+                    <a href="">
+                      Електронні рецепти, в тому числі на рецептурні лікарські
+                      засоби та за програмами реімбурсації (відшкодування
+                      вартості).
+                    </a>
+                  </li>
+                  <li>
+                    <a href=""> Електронна медична картка. </a>
+                  </li>
+                  <li>Медичні висновки про народження</li>
+                  <li>
+                    <a href=""
+                      >Медичні висновки про тимчасову непрацездатність.</a
+                    >
+                  </li>
+                  <li>
+                    <a href="">COVID-сертифікати.</a>
+                  </li>
+                  <li>тощо</li>
+                </ul>
+              </div>
+              <div>
+                <h2>
+                  ЕСОЗ об’єднує десятки мільйонів пацієнтів, сотні тисяч
+                  медичних працівників, сотні сервісів та десятки операторів
+                  медичних інформаційних систем, що надають сервіси для лікарів,
+                  фармацевтів, управлінців та пацієнтів.
+                </h2>
+
+                <div>
+                  <div class="roles-top">
+                    <div class="role-item left-top">
+                      <div class="role-item-content">
+                        <h2>eZdorovya</h2>
+                        <p>
+                          адмініструє Центральну базу даних ЕСОЗ та контролює
+                          розробку електронної системи охорони здоров’я в
+                          Україні
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="role-item right-top">
+                      <div class="role-item-content">
+                        <h2>Національна служба здоров'я України</h2>
+                        <p>
+                          аналізує та використовує дані для прогнозування потреб
+                          населення в медичних послугах, розробки програми
+                          медичних гарантій, здійснення оплати закладам за
+                          медичні послуги
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="role-item left-bottom">
+                      <div class="role-item-content">
+                        <h2>Міністерство охорони здоров'я України</h2>
+                        <p>
+                          формує політику у галузі охорони здоров’я, відповідає
+                          за реалізацію реформ
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="role-item right-bottom">
+                      <div class="role-item-content">
+                        <h2><strong>Бізнес</strong></h2>
+                        <p>
+                          електронні медичні інформаційні системи (МІС) —
+                          системи, які дають змогу автоматизувати роботу
+                          медзакладів з ЦБД
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+      
+    </main>
+
+    <!-- Main end -->
+
+    <!-- Footer start  -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logos">
+          <div class="footer__logo">
+            <a href="">
+              <img
+                src="../../assets/images/Ezdorovya_logo.png"
+                alt="ezdorovya logo"
+              />
+            </a>
+          </div>
+          <div class="footer__logo">
+            <a href="https://nszu.gov.ua/">
+              <img src="../../assets/images/logo-nczu_v1.svg" alt="logo-nczu" />
+            </a>
+          </div>
+          <div class="footer__logo">
+            <a href="https://moz.gov.ua/">
+              <img
+                src="../../assets/images/moz-logo.png"
+                alt="moz-logo"
+                style="width: 130px"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="footer__chapters">
+          <div>
+            <ul>
+              <li>
+                <a href="#">Електронна охорона здоров'я</a>
+              </li>
+              <li>
+                <a href="#"> - Системи</a>
+              </li>
+              <li>
+                <a href="#"> - Реєстри</a>
+              </li>
+              <li>
+                <a href="#"> - Дані</a>
+              </li>
+              <li>
+                <a href="#"> - Законодавство</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href=""> Надавачам послуг</a>
+              </li>
+              <li>
+                <a href=""> - Керівникам ЗОЗ</a>
+              </li>
+              <li>
+                <a href=""> - Лікарям</a>
+              </li>
+              <li>
+                <a href=""> - Аптечним закладам</a>
+              </li>
+              <li>
+                <a href=""> - Бібліотека знань</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Пацієнтам</h3>
+            <h3>Партнерам</h3>
+            <h3>Розробникам інформаційних систем</h3>
+            <h3>Новини</h3>
+            <h3>Підтримка</h3>
+          </div>
+        </div>
+
+        <div class="sections__divider-footer"></div>
+
+        <div class="foorer__contacts">
+          <div>
+            <h2>Адреса для листування:</h2>
+            <p>01001, м. Київ, а/с В-7</p>
+            <a href="office@ehealth.gov.ua">office@ehealth.gov.ua</a>
+          </div>
+          <div>
+            <h2>Юридична адреса:</h2>
+            <p>01012, майдан Незалежності, 2</p>
+          </div>
+          <div>
+            <h2>Для преси:</h2>
+            <a href="pr@ehealth.gov.ua">pr@ehealth.gov.ua</a>
+          </div>
+          <div>
+            <h2>З питаннь партнерства:</h2>
+            <a href="join@ehealth.gov.ua">join@ehealth.gov.ua</a>
+            <p>З питань взаємодії з електронною системою охорони здоровʼя:</p>
+            <p>
+              - Інформаційно-довідкова служба НСЗУ: 1677 (з понеділка по четвер
+              з 9 години ранку до 18 години та з 9 години ранку до 16:45 у
+              п’ятницю у робочі дні)
+            </p>
+            <p>
+              Контакти техпідтримки
+              <a href=""
+                ><span style="text-decoration: underline">
+                  медичних інформаційних систем</span
+                ></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Footer end  -->
+    <script src="../../js/fontSizeMutation.js" type="text/javascript"></script>
+    <script src="../../js/menuToggle.js"></script>
+    <script src="../../js/themeSwitcher.js"></script>
+    <script src="../../js/backToTopOrBottom.js"></script>
+    <!-- <script src="../js/tabSwitcher.js"></script> -->
+    <script src="../../js/searchField.js"></script>
+    <script src="../../js/breadcrumbs.js"></script>
+  </body>
+</html>

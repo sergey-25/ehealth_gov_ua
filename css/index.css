@@ -1,0 +1,839 @@
+.vertical-stepper {
+  display: flex;
+  flex-direction: column;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.step-icon {
+  flex: 0 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+}
+
+.step-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.step-content {
+  margin-left: 20px;
+}
+
+.step-content a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.step-content a:hover {
+  text-decoration: underline;
+}
+
+.step::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 14px;
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.step:first-child::before {
+  /* Hide line before the first step */
+  display: none;
+}
+
+
+
+/* Video player */
+
+.video {
+  margin-top: 110px;
+}
+
+.sections__divider {
+  border-top: 2px solid rgba(51, 51, 51, 0.1);
+  margin-top: 110px;
+  margin-bottom: 40px;
+}
+.in-section-divider{
+  border-top: 2px dashed rgba(52, 51, 51, 0.1);
+  /* border-style: dashed; */
+  margin-top: 30px;
+}
+
+.sections__divider-footer {
+  border-top: 2px solid #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main__requests h1,
+.goals__section h1,
+.news h1,
+.articles h1,
+.main__patients h1,
+.main__doctors h1,
+.main__mis h1,
+.main__how-connect h1,
+.main__partners h1,
+.esoz__main-structure h1 {
+  font-size: 50px;
+}
+
+.goals__section-top,
+.main__mis-top,
+.connect__section-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+/* Pppular requests */
+
+.requests__content {
+  margin-top: 40px  ;
+ padding: 70px 0;
+ border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.requests__content-list {
+  /* display: flex;
+  align-items: center; */
+  /* justify-content: space-between;  */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 470px);
+  gap: 160px;
+  text-align: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+
+.requests__content-list li a {
+  text-align: start;
+  margin-top: 35px;
+  height: 100px;
+  display: block;
+  color: #000;
+  font-family: RobotoCondensed-Regular, sans-serif;
+}
+
+.requests__content-list li {
+  /* display: flex;
+  align-items: center; */
+  position: relative;
+  color: #000;
+  height: 100px;
+  
+}
+.requests__content-list li::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #000;
+  width: 30px;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  transition: width 0.3s;
+}
+
+.requests__content-list li:hover:after {
+  background: #000;
+  width: 98%;
+}
+.requests__content-list li span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 100px;
+}
+
+.requests__content-list li i {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Goals */
+
+/* .goals__section-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 70%;
+  background: linear-gradient(to right, #9c9e9f, #f6f6f6);
+} */
+
+.goals__box {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.goals__box .box {
+  position: relative;
+  width: calc(100% / 5);
+}
+.box p {
+  color: var(--grayishBlue);
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+  padding: 30px;
+  margin: 7px;
+}
+
+.box:nth-child(even) {
+  top: -30px;
+}
+
+.box img {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 40px;
+}
+
+/* @media (max-width: 450px) {
+    .box {
+        height: 200px;
+    }
+} */
+
+@media (max-width: 950px) {
+  .box {
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+  .goals__box {
+    display: block;
+  }
+  .goals__box .box {
+    text-align: center;
+    width: 100%;
+    min-height: 250px;
+  }
+  .box:nth-child(even) {
+    top: 0;
+  }
+  .articles,
+  .news {
+    width: 100%;
+  }
+}
+
+.yellow {
+  border-top: 3px solid var(--yellow);
+}
+.dark-blue {
+  border-top: 3px solid var(--dark-blue);
+}
+
+/* @media (min-width: 950px) {
+    .goals__box {
+        display: block;
+    }
+    
+    .box-down {
+        position: relative;
+        top: 150px;
+    }
+    .box {
+        width: 20%;
+     
+    }    
+    .box:nth-child(even) {
+        top: 0;
+      }
+} */
+
+/* News and Articles */
+
+.main__news {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.news {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.news__list {
+}
+
+.news__item {
+  padding: 20px;
+  border-bottom: 2px solid var(--dark-blue);
+}
+
+/* Articles */
+.articles {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.articles__item {
+  padding: 20px;
+  border-bottom: 2px solid var(--yellow);
+}
+
+/* To patients */
+
+/* To Doctors */
+
+.main__doctors {
+}
+
+/* MIS */
+
+.main__mis {
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 0px;
+  width: 0%;
+  height: 0%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 22;
+  overflow-y: auto;
+}
+
+.popup .popup__content {
+  padding: 30px 20px;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.popup .popup__content img {
+  margin: 20px;
+  width: 200px;
+}
+
+.popup__imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  align-items: center;
+}
+
+.popup .popup__content h3 {
+  margin-bottom: 10px;
+}
+
+.popup .popup__content .popup__close-btn i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 35px;
+  color: #111;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.popup .popup__content .popup__close-btn i:hover {
+  color: red;
+}
+
+.popup.active-popup {
+  background: #95909b;
+  animation: popupAnimation 500ms ease-in-out forwards;
+}
+
+.popup.active-popup .popup__content {
+  opacity: 1;
+  transition: all 300ms ease-in-out 500ms;
+}
+
+@keyframes popupAnimation {
+  0% {
+    width: 0%;
+    height: 0%;
+  }
+  50% {
+    width: 100%;
+    height: 2px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* To Patients */
+
+.patients__questions-list,
+.doctors__questions-list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+
+.patients__questions-item,
+.doctors__questions-item {
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-top: 3px solid var(--footer_background);
+}
+.patients__questions-item h2, 
+.doctors__questions-item h2{
+  font-size: 30px;
+}
+
+.patients__btn,
+.doctors__btn {
+  display: block;
+  width: fit-content;
+  border-radius: 20px;
+  background: #000;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  color: #fff;
+  border: 2px solid #000;
+  font-family: RobotoCondensed-Bold, sans-serif;
+}
+
+.patients__btn:hover,
+.doctors__btn:hover {
+  color: #000;
+  border: 2px solid #000;
+  transform-origin: bottom right;
+  background: #fff;
+}
+
+/* How to connect */
+
+.main__how-connect {
+}
+
+.connect__content {
+  margin: 70px 0;
+}
+
+.connect__content-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Parteners */
+
+.main__partners {
+  position: relative;
+}
+
+/* Read more button */
+
+.goals__section button,
+.main__mis button,
+.main__how-connect button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+.goals__section button.goals__section-btn,
+.main__how-connect button.connect__section-btn {
+  width: 12rem;
+  height: auto;
+}
+.main__mis button.mis__open-btn {
+  width: 15rem;
+  height: auto;
+}
+
+.goals__section button.goals__section-btn .goals__btn-sircle,
+.main__mis button.mis__open-btn .mis__btn-sircle,
+.main__how-connect button.connect__section-btn .connect__btn-sircle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 2rem;
+  background: #141415;
+  border-radius: 1.625rem;
+}
+
+.dark-mode .goals__section button.goals__section-btn .goals__btn-sircle,
+.dark-mode .main__mis button.mis__open-btn .mis__btn-sircle,
+.dark-mode .main__how-connect button.connect__section-btn .connect__btn-sircle {
+  background: var(--dark-mode);
+}
+
+.goals__section button.goals__section-btn .goals__btn-sircle .btn__icon,
+.main__mis button.mis__open-btn .mis__btn-sircle .misBtn__icon,
+.main__how-connect button.connect__section-btn .connect__btn-sircle .btn__icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.goals__section button.goals__section-btn .goals__btn-sircle .btn__icon.arrow,
+.main__mis button.mis__open-btn .mis__btn-sircle .misBtn__icon.mis-arrow,
+.main__how-connect
+  button.connect__section-btn
+  .connect__btn-sircle
+  .btn__icon.connect-arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+.goals__section
+  button.goals__section-btn
+  .goals__btn-sircle
+  .btn__icon.arrow::before,
+.main__mis
+  button.mis__open-btn
+  .mis__btn-sircle
+  .misBtn__icon.mis-arrow::before,
+.main__how-connect
+  button.connect__section-btn
+  .connect__btn-sircle
+  .btn__icon.connect-arrow::before {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.goals__section
+  button.goals__section-btn:hover
+  .goals__btn-sircle
+  .btn__icon.arrow::before,
+.main__mis
+  button.mis__open-btn:hover
+  .mis__btn-sircle
+  .misBtn__icon.mis-arrow::before,
+.main__how-connect
+  button.connect__section-btn:hover
+  .connect__btn-sircle
+  .btn__icon.connect-arrow::before {
+  border-top: 0.125rem solid #000;
+  border-right: 0.125rem solid #000;
+}
+
+.goals__section button:hover .goals__btn-sircle,
+.main__mis button:hover .mis__btn-sircle,
+.main__how-connect button:hover .connect__btn-sircle {
+  width: 100%;
+  border: 2px solid #000;
+  background: #fff;
+}
+
+.goals__section button:hover .goals__btn-sircle .btn__icon.arrow,
+.main__mis button:hover .mis__btn-sircle .misBtn__icon.mis-arrow,
+.main__how-connect button:hover .connect__btn-sircle .btn__icon.connect-arrow {
+  transform: translate(1rem, 0);
+}
+
+.goals__section button.goals__section-btn:hover .goals__btn-text,
+.main__mis button.mis__open-btn:hover .mis__btn-text,
+.main__how-connect button.connect__section-btn:hover .connect__btn-text {
+  color: #000;
+}
+
+.dark-mode .goals__section button.goals__section-btn:hover .goals__btn-text,
+.dark-mode .main__mis button.mis__open-btn:hover .mis__btn-text,
+.dark-mode
+  .main__how-connect
+  button.connect__section-btn:hover
+  .connect__btn-text {
+  color: #fff;
+}
+
+.dark-mode .goals__section button.goals__section-btn .goals__btn-text,
+.dark-mode .main__mis button.mis__open-btn .mis__btn-text,
+.dark-mode .main__how-connect button.connect__section-btn .connect__btn-text {
+  color: var(--dark-mode);
+}
+
+.goals__section button.goals__section-btn .goals__btn-text,
+.main__mis button.mis__open-btn .mis__btn-text,
+.main__how-connect button.connect__section-btn .connect__btn-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: -9px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #000;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: ProbaPro-Bold, sans-serif;
+}
+
+@media (max-width: 760px) {
+  .goals__section button.goals__section-btn .goals__btn-text,
+  .main__mis button.mis__open-btn .mis__btn-text,
+  .main__how-connect button.connect__section-btn .connect__btn-text {
+    font-size: 10px;
+  }
+}
+
+/* colors
+ #105fd3 blue
+ #75dbab green
+ #c4f28d yellow
+ */
+.swiper-image {
+  width: 78%;
+  height: 84px;
+}
+
+/* animated buttons */
+
+.categoryWrapper {
+  /* height: 310px;
+	width: 460px; */
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.categoryWrapper:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a29ca9+0,95909b+99 */
+  background: #a29ca9; /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    #a29ca9 0%,
+    #95909b 99%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    #a29ca9 0%,
+    #95909b 99%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #a29ca9 0%,
+    #95909b 99%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a29ca9', endColorstr='#95909b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.9s ease 0s;
+}
+
+/* .categoryWrapper:hover:after{
+	opacity: 0.4;
+} */
+
+.categoryWrapper h1 {
+  color: #000;
+  font-size: 35px;
+  letter-spacing: 2px;
+  -webkit-transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 10;
+}
+
+/* .categoryWrapper:hover h1{
+	transform: translateY(-10px);
+} */
+
+.categoryWrapper a {
+  position: absolute;
+  transform: translatey(60px);
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  color: #000;
+  width: 250px;
+  height: 50px;
+  font-size: 17px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  z-index: 10;
+}
+
+.categoryWrapper a span {
+  display: block;
+  position: relative;
+  line-height: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.categoryWrapper a > span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 120px;
+  height: 0;
+
+  border: 1px solid #000;
+  border-left: none;
+  border-bottom: none;
+
+  transition: height 0.3s ease-out, width 0.3s ease-out 0.3s;
+}
+
+.categoryWrapper:hover a > span:after {
+  width: calc(50% - 1px);
+  height: calc(100% - 2px);
+  transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
+}
+
+.categoryWrapper a > span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 120px;
+  height: 0;
+
+  border: 1px solid #000;
+  border-right: none;
+  border-bottom: none;
+
+  transition: height 0.3s ease-out, width 0.3s ease-out 0.3s;
+}
+
+.categoryWrapper:hover a > span:before {
+  width: calc(50% - 1px);
+  height: calc(100% - 2px);
+  transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
+}
+
+.categoryWrapper a > span > span:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0%;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.categoryWrapper:hover a > span > span:before {
+  opacity: 1;
+  border-bottom: 1px solid #000;
+  width: calc(50%);
+  height: 1px;
+  transition: opacity 0s ease-out 0.6s, width 0.3s ease-out 0.5s;
+}
+
+.categoryWrapper a > span > span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.categoryWrapper:hover a > span > span:after {
+  opacity: 1;
+  border-bottom: 1px solid #000;
+  width: calc(50%);
+  height: 1px;
+  transition: opacity 0s ease-out 0.6s, width 0.3s ease-out 0.5s;
+}
+
+.categoryWrapper a > span > span > span {
+  transition: color 0.15s ease-out 0.3s;
+  /* color: transparent; */
+  color: #000;
+}
+
+.categoryWrapper:hover a > span > span > span {
+  color: #000;
+}
+
+.categoryWrapper a > span > span > span:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  content: attr(data-attr-span);
+  width: 0%;
+  height: 100%;
+  background: #000;
+  white-space: nowrap;
+  text-align: center;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  transition: width 0.2s;
+}
+
+.categoryWrapper a:hover > span > span > span:after {
+  width: 100%;
+}
+
+/* one more animated button */

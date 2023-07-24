@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <title>Інформаційна система НСЗУ</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/index.css" />
+
+    <!-- ===== Boxicons CDN Link ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- ===== Fontawesome CDN Link ===== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- ===== Link Swiper's CSS ===== -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header start -->
+    <header class="header">
+      <div class="container">
+        <div class="header__box">
+          <div class="visual__block">
+            <div class="title__box">
+              <div class="logo visual__title">
+                <a href="../../index.html">
+                  <img
+                    style="width: 400px"
+                    src="../../assets/images/new_design/eh_sign_concept_white.png"
+                    alt="e-health logo"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <div class="nav">
+              <div class="nav__menu">
+                <div class="search__box">
+                  <span class="search__box-span">
+                    <input
+                      id="field"
+                      class="search__line"
+                      type="text"
+                      placeholder="Пошук..."
+                      oninput="toggleIcon()"
+                    />
+                    <i id="icon-search" class="bx bx-search search__icon"></i>
+                    <i id="icon-cross" class="bx bx-x cross__icon"></i>
+                  </span>
+
+                  <div class="menu__btn-box">
+                    <button id="btnOpen" class="menu-toggle">Menu</button>
+                  </div>
+
+                  <div class="toggle-btn-box">
+                    <i
+                      id="font-size-toggle"
+                      class="bx bx-font-size btn-icon icon__visual"
+                    ></i>
+                    <i id="toggleButton" class="bx bx-low-vision btn-icon"></i>
+                  </div>
+                </div>
+
+                <nav class="fullscreen-nav">
+                  <div class="background-img">
+                    <div class="nav__content">
+                      <div class="nav__content-sections">
+                        <h3>Електронна охорона здоровʼя</h3>
+                        <ul>
+                          <li class="dropdwn__item">
+                            <div class="nav__link dropdown__btn">
+                              Системи
+                              <i class="bx bx-chevron-down dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dordwn__container">
+                              <div class="dropdwn__content">
+                                <div class="dropdwn__group">
+                                  <div class="dropdwn__icon"></div>
+                                  <span class="dropdwn__title"> </span>
+
+                                  <ul class="dropdwn__list">
+                                    <li>
+                                      <a
+                                        href="./esoz.html"
+                                        class="dropdwn__link"
+                                        >ЕОЗ</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="./central.html"
+                                        class="dropdwn__link"
+                                        >Централь</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a href="./mis.html" class="dropdwn__link"
+                                        >МІСи</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="./is-nczu.html"
+                                        class="dropdwn__link"
+                                        >ІС НСЗУ</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="dropdwn__item">
+                            <div class="nav__link dropdown__btn">
+                              Реєстри
+                              <i class="bx bx-chevron-down dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dordwn__container">
+                              <div class="dropdwn__content">
+                                <div class="dropdwn__group">
+                                  <div class="dropdwn__icon"></div>
+                                  <span class="dropdwn__title"> </span>
+
+                                  <ul class="dropdwn__list">
+                                    <li>
+                                      <a
+                                        href="../Реєстри/registers.html"
+                                        class="dropdwn__link"
+                                        >Базові реєстри країни та сфери охорони
+                                        здоровʼя</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="dropdwn__item">
+                            <div class="nav__link dropdown__btn">
+                              Дані
+                              <i class="bx bx-chevron-down dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dordwn__container">
+                              <div class="dropdwn__content">
+                                <div class="dropdwn__group">
+                                  <div class="dropdwn__icon"></div>
+                                  <span class="dropdwn__title"> </span>
+
+                                  <ul class="dropdwn__list">
+                                    <li>
+                                      <a
+                                        href="../Дані/dashboards.html"
+                                        class="dropdwn__link"
+                                        >Дашборди ЕСОЗ</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../Дані/information-platform.html"
+                                        class="dropdwn__link"
+                                        >Інформаційна платформа
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="" class="dropdwn__link"
+                                        >Сайт з протоколами лікування
+                                        Duodecim</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <a
+                              class="nav__link dropdown__btn"
+                              href="../Законодавство/legislation.html"
+                            >
+                              Законодавство
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="nav__content-sections">
+                        <h3>Надавачам послуг</h3>
+
+                        <ul>
+                          <li class="dropdwn__item">
+                            <div class="nav__link dropdown__btn">
+                              Керівникам ЗОЗ
+                              <i class="bx bx-chevron-down dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dordwn__container">
+                              <div class="dropdwn__content">
+                                <div class="dropdwn__group">
+                                  <div class="dropdwn__icon"></div>
+                                  <span class="dropdwn__title"> </span>
+
+                                  <ul class="dropdwn__list">
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Кервникам-ЗОЗ/how-connect-institution-to-ehcs.html"
+                                        class="dropdwn__link"
+                                        >Як підключити заклад до ЕСОЗ</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Кервникам-ЗОЗ/how-to-choose-mis.html"
+                                        class="dropdwn__link"
+                                        >Як обрати МІС</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Кервникам-ЗОЗ/catalog-mis.html"
+                                        class="dropdwn__link"
+                                        >Каталог МІС</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="dropdwn__item">
+                            <div class="nav__link dropdown__btn">
+                              Лікарям
+                              <i class="bx bx-chevron-down dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dordwn__container">
+                              <div class="dropdwn__content">
+                                <div class="dropdwn__group">
+                                  <div class="dropdwn__icon"></div>
+                                  <span class="dropdwn__title"> </span>
+
+                                  <ul class="dropdwn__list">
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Лікарям/study.html"
+                                        class="dropdwn__link"
+                                        >Навчання</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Лікарям/system-performance-monitoring.html"
+                                        class="dropdwn__link"
+                                        >Моніторинг працездатності системи</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Лікарям/report-a-problem.html"
+                                        class="dropdwn__link"
+                                        >Повідомити про проблему</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li class="dropdwn__item">
+                            <div class="nav__link dropdown__btn">
+                              Аптечним закладам
+                              <i class="bx bx-chevron-down dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dordwn__container">
+                              <div class="dropdwn__content">
+                                <div class="dropdwn__group">
+                                  <div class="dropdwn__icon"></div>
+                                  <span class="dropdwn__title"> </span>
+
+                                  <ul class="dropdwn__list">
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Аптечним-закладам/how-to-connect-pharmacy-to-ehcs.html"
+                                        class="dropdwn__link"
+                                        >Як підключити аптеку до ЕСОЗ</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Аптечним-закладам/contracting-with-the-nhsu.html"
+                                        class="dropdwn__link"
+                                        >Контрактування з НСЗУ</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Аптечним-закладам/how-to-choose-mis.html"
+                                        class="dropdwn__link"
+                                        >Як обрати МІС</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Аптечним-закладам/catalog-mis.html"
+                                        class="dropdwn__link"
+                                        >Каталог МІС</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Аптечним-закладам/system-performance-monitoring.html"
+                                        class="dropdwn__link"
+                                        >Моніторинг працездатності системи</a
+                                      >
+                                    </li>
+                                    <li>
+                                      <a
+                                        href="../../Надавачам послуг/Аптечним-закладам/FAQ.html"
+                                        class="dropdwn__link"
+                                        >FAQ</a
+                                      >
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+
+                          <li>
+                            <a
+                              class="nav__link dropdown__btn"
+                              href="../../Надавачам послуг/library.html"
+                            >
+                              Бібліотека знань
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="nav__content-sections">
+                        <h3>Пацієнтам</h3>
+
+                        <ul>
+                          <li>
+                            <a class="nav__link dropdown__btn">
+                              Як укласти декларацію з сімейним лікарем
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              Як отримати е-рецепт
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              Як отримати е-направлення до спеціаліста
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              Медичні висновки про тимчасову непрацездатність
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              Як скористатися послугами єМалятко
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="nav__content-sections">
+                        <h3>Партнерам</h3>
+
+                        <ul>
+                          <li>
+                            <a href="" class="nav__link dropdown__btn">
+                              Органам державної влвади
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              Розробникам ПЗ
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="nav__content-sections">
+                        <h3>Розробникам інформаційних систем</h3>
+
+                        <ul>
+                          <li>
+                            <a href="" class="nav__link dropdown__btn">
+                              Як приєднати МІС до ЕСОЗ
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              Кабінет розробника
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              F&Q
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="nav__content-sections">
+                        <h3>Новини</h3>
+
+                        <ul>
+                          <li>
+                            <a href="" class="nav__link dropdown__btn">
+                              Як приєднати МІС до ЕСОЗ
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              Кабінет розробника
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              F&Q
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="nav__content-sections">
+                        <h3>Підтримка</h3>
+
+                        <ul>
+                          <li>
+                            <a href="" class="nav__link dropdown__btn">
+                              Як приєднати МІС до ЕСОЗ
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              Кабінет розробника
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+
+                          <li>
+                            <a class="nav__link dropdown__btn" href="">
+                              F&Q
+                              <i
+                                class="bx bx-chevron-right dropdown__arrow-right"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Header end -->
+
+    <div class="container">
+      <div id="breadcrumbs" class="breadcrumbs">
+        <span class="breadcrumb"><a href="../../index.html">Головна</a></span>
+        <span class="separator">/</span>
+      </div>
+    </div>
+
+    <main class="main__central">
+      <i
+        id="scrollButton"
+        class="fas fa-chevron-circle-up scroll__icon-top"
+      ></i>
+
+      <div class="container">
+        <div class="tab__section-title">
+          <h1>
+            Інформаційна система Національної системи здоров’я України (НСЗУ)
+          </h1>
+        </div>
+
+        <section class="esoz__main-content">
+          <h2>
+            <strong>
+              Інформаційна система Національної системи охорони здоров’я України
+              (НСЗУ)</strong
+            >
+            <span>
+              – це сукупність інформаційних підсистем щодо укладення та
+              виконання договорів, аналізу даних, формування аналітичних та
+              фінансових звітів, обміну інформацією між користувачами. Ця
+              система допомагає НСЗУ контролювати ефективність та прозорість
+              витрачання бюджетних коштів на охорону здоров’я за програмою
+              медичних гарантій.
+            </span>
+          </h2>
+
+          <div class="sections__divider"></div>
+
+          <article>
+            <h2>
+              <strong>Мета функціонування Інформаційної системи НСЗУ</strong>
+              <span>
+                – забезпечення виконання покладених на НСЗУ функцій щодо
+                реалізації державної політики у сфері державних фінансових
+                гарантій медичного обслуговування населення.
+              </span>
+            </h2>
+          </article>
+
+          <div class="sections__divider"></div>
+
+          <article>
+            <h2>
+              <strong>Інформаційна система НСЗУ</strong>
+              <span>
+                – важливий невід’ємний елемент Центральної бази даних (ЦБД)
+                (гіперлінк на сторінку ЦБД в бібліотеці) ЕСОЗ (гіперлінк на
+                сторінку ЕСОЗ в бібліотеці) у частині, необхідній для реалізації
+                державних фінансових гарантій медичного обслуговування
+                населення, а також забезпечення можливості створення, перегляду,
+                обміну інформацією та документами.
+              </span>
+            </h2>
+          </article>
+
+          <article>
+            <p>
+              Інформаційна система НСЗУ складається з власних аналітичних
+              підсистем, які інтегрують і обробляють дані реєстрів ЦБД, тощо.
+            </p>
+            <p>Національна служба здоров'я України аналізує та використовує дані
+              для прогнозування потреб населення в медичних послугах, розробки
+              програми медичних гарантій, здійснення оплати закладам за медичні
+              послуги.
+            </p>
+            <p>
+                Цією інформаційною системою користуються виключно співробітники НСЗУ.
+            </p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <!--Divide Footer -->
+
+    <div class="divider__footer">
+      <div class="shadow__footer"></div>
+    </div>
+
+    <!--Footer -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__logos">
+          <div class="footer__logo">
+            <a href="">
+              <img
+                src="../../assets/images/Ezdorovya_logo.png"
+                alt="ezdorovya logo"
+              />
+            </a>
+          </div>
+          <div class="footer__logo">
+            <a href="https://nszu.gov.ua/">
+              <img src="../../assets/images/logo-nczu_v1.svg" alt="logo-nczu" />
+            </a>
+          </div>
+          <div class="footer__logo">
+            <a href="https://moz.gov.ua/">
+              <img
+                src="../../assets/images/moz-png-logo.png"
+                alt="moz-logo"
+                style="width: 130px"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="footer__chapters">
+          <div>
+            <ul>
+              <li>
+                <a href="#">Електронна охорона здоров'я</a>
+              </li>
+              <li>
+                <a href="#"> - Системи</a>
+              </li>
+              <li>
+                <a href="#"> - Реєстри</a>
+              </li>
+              <li>
+                <a href="#"> - Дані</a>
+              </li>
+              <li>
+                <a href="#"> - Законодавство</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>
+                <a href=""> Надавачам послуг</a>
+              </li>
+              <li>
+                <a href=""> - Керівникам ЗОЗ</a>
+              </li>
+              <li>
+                <a href=""> - Лікарям</a>
+              </li>
+              <li>
+                <a href=""> - Аптечним закладам</a>
+              </li>
+              <li>
+                <a href=""> - Бібліотека знань</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Пацієнтам</h3>
+            <h3>Партнерам</h3>
+            <h3>Розробникам інформаційних систем</h3>
+            <h3>Новини</h3>
+            <h3>Підтримка</h3>
+          </div>
+        </div>
+
+        <div class="sections__divider-footer"></div>
+
+        <div class="foorer__contacts">
+          <div>
+            <h2>Адреса для листування:</h2>
+            <p>01001, м. Київ, а/с В-7</p>
+            <a href="office@ehealth.gov.ua">office@ehealth.gov.ua</a>
+          </div>
+          <div>
+            <h2>Юридична адреса:</h2>
+            <p>01012, майдан Незалежності, 2</p>
+          </div>
+          <div>
+            <h2>Для преси:</h2>
+            <a href="pr@ehealth.gov.ua">pr@ehealth.gov.ua</a>
+          </div>
+          <div>
+            <h2>З питаннь партнерства:</h2>
+            <a href="join@ehealth.gov.ua">join@ehealth.gov.ua</a>
+            <p>З питань взаємодії з електронною системою охорони здоровʼя:</p>
+            <p>
+              - Інформаційно-довідкова служба НСЗУ: 1677 (з понеділка по четвер
+              з 9 години ранку до 18 години та з 9 години ранку до 16:45 у
+              п’ятницю у робочі дні)
+            </p>
+            <p>
+              Контакти техпідтримки
+              <a href=""
+                ><span style="text-decoration: underline">
+                  медичних інформаційних систем</span
+                ></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toggle font size for visual impaired -->
+    <script src="../../js/fontSizeMutation.js"></script>
+    <!-- Mobile togle menu -->
+    <script src="../../js/menuToggle.js"></script>
+    <!-- Toggle color for visual impaired  -->
+    <script src="../../js/themeSwitcher.js"></script>
+    <!-- Back to top or bottom script -->
+    <script src="../../js/backToTopOrBottom.js"></script>
+    <!-- Search field code -->
+    <script src="../../js/searchField.js"></script>
+  </body>
+</html>

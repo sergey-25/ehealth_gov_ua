@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Fullscreen Navigation</title>
+  <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <button id="btnOpen" class="menu-toggle">Menu</button>
+      </header>
+      
+      <nav class="fullscreen-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="close-icon fas fa-times"></i>
+      </nav>
+
+  <script >
+
+const hamburger = document.querySelector('.hamburger');
+const fullscreenNav = document.querySelector('.fullscreen-nav');
+const btnOpen = document.getElementById('btnOpen')
+
+btnOpen.addEventListener('click', ()=>{
+    btnOpen.classList.toggle('is-active')
+    fullscreenNav.classList.toggle('active');
+    console.log('fsdfsdfds')
+})
+
+
+  </script>
+</body>
+</html>
